@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>길 위의 감정 지도 (EmoMap)</title>
+
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+
+    <link rel="stylesheet" href="style.css" />
+
+ 
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>나의 감정 지도</h1>
+        <p>지도를 클릭해 기록해주세요.</p>
+    </header>
+
+    <section id="controls">
+        <button id="download-btn">내 감정 기록 저장하기</button>
+        <input type="file" id="upload-json" accept="application/json" />
+    </section>
+
+    <div id="map"></div>
+
+
+    <div id="emotion-picker" class="hidden">
+        <p>이곳에서 느낀 감정은?</p>
+        <div class="emotions">
+            <button>😊</button>
+            <button>😢</button>
+            <button>😡</button>
+            <button>😍</button>
+            <button>😌</button>
+        </div>
+
+        <div class="memo-box">
+            <input type="text"
+                   id="memo-input"
+                   placeholder="무슨 일이 있었나요?" />
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
